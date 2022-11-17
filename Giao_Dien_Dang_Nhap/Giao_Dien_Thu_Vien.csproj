@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C6524C97-AA83-4CC9-B405-B1A60D639BA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Giao_Dien_Dang_Nhap</RootNamespace>
+    <AssemblyName>Giao_Dien_Dang_Nhap</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CommonFunction.cs" />
+    <Compile Include="Classes\Connection.cs" />
+    <Compile Include="Main\frmChartMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmChartMonth.Designer.cs">
+      <DependentUpon>frmChartMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmChartYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmChartYear.Designer.cs">
+      <DependentUpon>frmChartYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmMainStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmMainStudent.Designer.cs">
+      <DependentUpon>frmMainStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Librarian\frmCon\frmMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Librarian\frmCon\frmMuon.Designer.cs">
+      <DependentUpon>frmMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Librarian\frmCon\frmTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Librarian\frmCon\frmTra.Designer.cs">
+      <DependentUpon>frmTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Librarian\frmLibrarian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Librarian\frmLibrarian.Designer.cs">
+      <DependentUpon>frmLibrarian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Book.cs" />
+    <Compile Include="View\Librarian\frmCon\frmTailieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Librarian\frmCon\frmTailieu.Designer.cs">
+      <DependentUpon>frmTailieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Librarian\frmCon\frmDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Librarian\frmCon\frmDocGia.Designer.cs">
+      <DependentUpon>frmDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Librarian\frmCon\frmViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Librarian\frmCon\frmViPham.Designer.cs">
+      <DependentUpon>frmViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\frmForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\frmForgetPassword.Designer.cs">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Reader\frmConReader\frmGopY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmGopY.Designer.cs">
+      <DependentUpon>frmGopY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReResult.Designer.cs">
+      <DependentUpon>frmReResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReSachMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReSachMuon.Designer.cs">
+      <DependentUpon>frmReSachMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReGiaoTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReGiaoTrinh.Designer.cs">
+      <DependentUpon>frmReGiaoTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReResearch1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReResearch1.Designer.cs">
+      <DependentUpon>frmReResearch1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReAllDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReAllDocument.Designer.cs">
+      <DependentUpon>frmReAllDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReSachTKhao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reader\frmConReader\frmReSachTKhao.Designer.cs">
+      <DependentUpon>frmReSachTKhao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reader\frmReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reader\frmReader.Designer.cs">
+      <DependentUpon>frmReader.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmMainStudent.resx">
+      <DependentUpon>frmMainStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Librarian\frmCon\frmMuon.resx">
+      <DependentUpon>frmMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Librarian\frmCon\frmTailieu.resx">
+      <DependentUpon>frmTailieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Librarian\frmCon\frmDocGia.resx">
+      <DependentUpon>frmDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Librarian\frmCon\frmTra.resx">
+      <DependentUpon>frmTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Librarian\frmCon\frmViPham.resx">
+      <DependentUpon>frmViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Librarian\frmLibrarian.resx">
+      <DependentUpon>frmLibrarian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\frmForgetPassword.resx">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\Reader\frmConReader\frmGopY.resx">
+      <DependentUpon>frmGopY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reader\frmConReader\frmReGiaoTrinh.resx">
+      <DependentUpon>frmReGiaoTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reader\frmConReader\frmReResearch1.resx">
+      <DependentUpon>frmReResearch1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reader\frmConReader\frmReResult.resx">
+      <DependentUpon>frmReResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reader\frmConReader\frmReSachMuon.resx">
+      <DependentUpon>frmReSachMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reader\frmConReader\frmReAllDocument.resx">
+      <DependentUpon>frmReAllDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reader\frmConReader\frmReSachTKhao.resx">
+      <DependentUpon>frmReSachTKhao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reader\frmReader.resx">
+      <DependentUpon>frmReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Going to the Library - Multi - Sample.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general-user-name-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Security-Password-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Going to the Library - Multi - Sample1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\many-old-books-stacked-in-texture-picture-id1074590734.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4705921.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-arrows-icon-arrow-right-icon-art-studio-icon-5dc9369333cf29.9871236915734677952122.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrows-Right-3-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47059211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\561127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\191.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\onee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1024px-Search_Icon.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10 Hacks For Organizing Books And Making Your Reading Space Instagram-Worthy.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon-customer-icon-11564158924ifw7wyjtfu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books-publications.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoGTVT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1176687059-1024x1024.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feedback-38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\z2582732921608_240ec28cbf965bb7b6dfaf6a588101d8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643769-building-home-house-main-menu-start_113416.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\115892.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3917754.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-chart-icon-646-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1009849-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_icon-icons.com_70975.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1042455.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4397.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\654257.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43971.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1950715.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\130304.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
