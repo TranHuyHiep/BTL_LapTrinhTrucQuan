@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using Excel = Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Giao_Dien_Dang_Nhap.View.Librarian
 {
@@ -171,7 +171,7 @@ namespace Giao_Dien_Dang_Nhap.View.Librarian
 
         private void btnInDS_Click(object sender, EventArgs e)
         {
-            /*Excel.Application exApp = new Excel.Application();
+            Excel.Application exApp = new Excel.Application();
             Excel.Workbook exBook = exApp.Workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);
             Excel.Worksheet exSheet = (Excel.Worksheet)exBook.Worksheets[1];
             Excel.Range exRange = (Excel.Range)exSheet.Cells[1, 1];
@@ -200,8 +200,7 @@ namespace Giao_Dien_Dang_Nhap.View.Librarian
             exSheet.Range["B6"].Value = "Ma Sinh Vien";
             exSheet.Range["C6"].Value = "Ho Ten";
             exSheet.Range["D6"].Value = "SDT";
-            exSheet.Range["E6"].Value = "Gioi Tinh";
-            exSheet.Range["F6"].Value = "Email";
+            exSheet.Range["E6"].Value = "Email";
             //In danh sach cac chi tiet
             int dong = 11;
             for (int i = 0; i < dgvKetQua.Rows.Count - 1; i++)
@@ -211,7 +210,6 @@ namespace Giao_Dien_Dang_Nhap.View.Librarian
                 exSheet.Range["C" + (dong + i).ToString()].Value = dgvKetQua.Rows[i].Cells[1].Value.ToString();
                 exSheet.Range["D" + (dong + i).ToString()].Value = dgvKetQua.Rows[i].Cells[2].Value.ToString();
                 exSheet.Range["E" + (dong + i).ToString()].Value = dgvKetQua.Rows[i].Cells[3].Value.ToString();
-                exSheet.Range["F" + (dong + i).ToString()].Value = dgvKetQua.Rows[i].Cells[4].Value.ToString();
             }
 
             dong = dong + dgvKetQua.Rows.Count;
@@ -228,7 +226,7 @@ namespace Giao_Dien_Dang_Nhap.View.Librarian
             {
                 exBook.SaveAs(save.FileName.ToLower());
             }
-            exApp.Quit();*/
+            exApp.Quit();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
